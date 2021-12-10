@@ -1,0 +1,27 @@
+<main class="index">  
+  <section class="index__card">
+    <article class="card_content">
+
+        <img src="${filme.imagem} alt="Imagem do tema" class="card__img">
+
+        <h2 class="card__titulo">
+        ${filme.Filme}
+        </h2>
+
+        <h2 class="nomeArtigo">
+        Gênero: ${filme.Gênero}
+        </h2>
+
+        <h2 class="emailArtigo">
+        Assistido: ${filme.Assistido}
+        </h2>
+
+        <h2 class="emailArtigo">
+        Nota: ${filme.Nota}
+        </h2>
+
+      
+
+    </article>
+  </section>
+</main>

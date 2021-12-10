@@ -1,0 +1,20 @@
+
+body{
+    background-color:rgb(0, 0, 0)
+}
+#lista {
+    display: flex;
+    margin: 5rem;
+
+   
+}
+
+
+.text-center{color:azure; margin-top:5rem}
+
+.btn-lg{background-color: azure; color: black;width: 10rem}
+
+
+
+
+.form-control{background-color: azure;}
