@@ -28,7 +28,10 @@ const getFilmes = async () => {
 <div class="col"> 
 <div class"col">
         <div class="card"  style="width: 18rem;">
-  <img src="${filme.imagem}" class="card-img-top" alt="...">
+        <div class="img-banner">
+        <img src="${filme.imagem}" class="card-img-top" alt="...">
+
+        </div>
   <div class="card-body">
     <h5 class="card-title">${filme.Filme}</h5>
 
@@ -40,6 +43,8 @@ const getFilmes = async () => {
   <div class="card-body">
   <button class="btn btn-primary" onclick="putFilmes(${filme.id})">Editar</button>
   <button class="btn btn-danger" onclick="deleteFilme(${filme.id})">Deletar</button>
+   <h3 class="checkText"> Marque se já assistiu: </h3>
+  <input type="checkbox" class="btnAssistido" id="btnAssistido" ${filme.Assistido == 'sim' ? 'checked' : ''}  onclick="btnAssistido(event,${filme.id})"></input>
   </div>
 </div>
 </div> 
@@ -179,3 +184,35 @@ const limpaCampos = () => {
 
 
 }
+
+const btnAssistido = async (event, id) => {
+const checked = event.target.checked
+const filme = await getById(id)
+
+console.log(event.target.checked)
+
+if (checked){
+    filme.Assistido = 'sim'
+}
+else {
+    filme.Assistido = 'não'
+}
+
+
+console.log(filme)
+const response = await fetch(`${apiUrl}/filmes/update/${id}`, {
+    method: 'PUT',
+    headers: {
+        "Content-Type":"application/json"
+    },
+    body: JSON.stringify(filme)
+    
+})
+lista.innerHTML = "";
+
+getFilmes();
+
+ 
+
+}
+

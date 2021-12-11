@@ -5,7 +5,7 @@ const blueFilmes = [
       Duração: '1h 41min',
       Gênero: 'Animação',
       Nota: 10,
-      Assistido: 'Sim',
+      Assistido: 'não',
       imagem: 'https://images-na.ssl-images-amazon.com/images/I/61KcmrlBKqL.jpg'
 
 
@@ -16,7 +16,7 @@ const blueFilmes = [
    Duração: '2h 35m',
    Gênero: 'Ação',
    Nota: 8,
-   Assistido: 'Sim',
+   Assistido: 'não',
    imagem: 'https://www.cafecomfilme.com.br/media/k2/items/cache/7a7a1b5b62bd91f168816ae073e91b87_XL.jpg?t=20201213_160849'
 
 
@@ -28,7 +28,7 @@ const blueFilmes = [
   Duração: ' 2h 2m',
   Gênero: 'Ação',
   Nota: 9,
-  Assistido: 'Sim',
+  Assistido: 'não',
   imagem: 'https://br.web.img3.acsta.net/pictures/19/04/03/18/23/2539612.jpg'
 }
 ]
